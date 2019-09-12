@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>惊风随笔-个人技术分享博客网站</title>
-  <meta name="keywords" content>
-  <meta name="description" content="惊风随笔-个人技术分享博客网站">
+  <title>jquery搭建 | 惊风随笔-个人技术分享博客网站</title>
+  <meta name="keywords" content=" jquery , 前端框架 ">
+  <meta name="description" content="jquery搭建 | 惊风随笔-个人技术分享博客网站">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="关于惊风：　　潜心研究web前端技术，一边工作一边积累经验，分享一些经验等心得。 　　1. 一个对于”web前端”和”SEO技术”稍有研究，并一直致力于web前端方向的站长。 　　2. 很多时候觉得自己对待任何事都很执着，一旦定了目标，就会不达目标不罢休，永不退缩! 　　3.不管学习什么东西，一定要有属于自己的“学习方法”和善于“对事物的总结”。 　　4.于岁月中前进，抱着一份责任，不要忘记我们出">
 <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -331,12 +331,59 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-jquerygo" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-github"><span class="toc-text">hexo+github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于惊风"><span class="toc-text">关于惊风</span></a></li></ol></li></ol>
+        <h1 class="article-title">jquery搭建</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="前端">前端</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color2">jquery</a>
+            
+            <a href="javascript:" class="color5">前端框架</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-09-12 16:18:56'>2019-09-12 00:44</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:674</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        
     
 <style>
     .left-col .switch-btn,
@@ -349,28 +396,88 @@
     }
 </style>
 </div>
-            <h1 id="hexo-github"><a href="#hexo-github" class="headerlink" title="hexo+github"></a>hexo+github</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>阮一峰说喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>大多数Blog作者，都停留在第一和第二阶段，因为第三阶段不太容易到达：你很难找到俯首听命、愿意为你管理服务器的人。</p>
-<p>但是现在Github和GitCafe等代码站都提供了Pages功能，只要将写好的文章提交到Github上托管，即可生成独立博客，而且提供几乎不限流量的存储空间，一切都是免费的。一旦搭建好，则只需要负责写文章就行了，不需要过多的管理。这不就是博客的第三阶段吗。</p>
-<h2 id="关于惊风"><a href="#关于惊风" class="headerlink" title="关于惊风"></a>关于惊风</h2><p>到目前为止已经写了<code class="article_number"></code>篇文章  共<code  class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次。</p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　description</p>
+<p>　　jQuery，顾名思义，<span style="color: #ff0000;">也就是JavaScript和Query(查询)，即辅助JavaScript开发的库。jQuery是一个快速、简洁的JavaScript框架</span>，是继Prototype之后又一个优秀的JavaScript代码库(或JavaScript框架)。jQuery设计的<span style="color: #ff0000;">宗旨是&ldquo;write Less，Do More&rdquo;</span>，即倡导写更少的代码，做更多的事情。<span style="color: #ff0000;">它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互，jQuery的理念就是&ldquo;write less do more&rdquo;。</span></p>
+<p>　　jQuery库文件有2个版本，分别是1.x版本和2.x版本。但是<span style="color: #ff0000;">1.x版本支持IE6、IE7和IE8，而2.x则不再支持，</span>目前依旧有很多人在使用的6/7/8等的版本，市场依旧很大，所以最新的版本不一定是最好的，所以建议使用1.x版本的，jQuery库文件其实有2种类型：(1)开发版;(2)发布版。开发版是没有经过压缩的，供给我们学习jQuery的源码使用，一般用jquery.js命名。而发布版是经过压缩的，供给我们使用jQuery，一般用jquery.min.js命名，我们开发用的一般都是压缩的版本。</p>
+<p>　　那么该如何安装jQuery呢?其实很简单，跟CSS的引入是一样的，只是自己的写的jq的代码必须写在引入源码的下面才会有效，否则是无效的，必须是这种模式：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">&lt;!--</span><span style="color: #008000;">jQuery库</span><span style="color: #008000;">--&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #ff0000;"> src</span><span style="color: #0000ff;">="jquery-1.11.3.min.js"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script  </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;">这里编写你的jQuery代码</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>　　其实还有其他的方式引入，这种方式也很多人用，就是直接引入，主要有以下几个方式：Staticfile CDN、又拍云、新浪、谷歌或微软引用 jQuery</p>
+<p>　　Staticfile CDN:</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>　　又拍云 CDN:</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>　　百度 CDN：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>　　新浪 CDN:</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>　　Google CDN:</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>　　这些方式的引入会从缓存中加载 jQuery，这样可以减少加载时间。同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。</p>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 2637574117@qq.com </span>
+    </div>
+</article>
 
-        </article>
-        
-        <p>
-            <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>jquery搭建</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">674</span></p>
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="惊风">惊风</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-09-12, 00:44:50</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-12, 16:18:56</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/12/jquerygo/" title="jquery搭建">http://yoursite.com/2019/09/12/jquerygo/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019</p>

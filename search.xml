@@ -4,7 +4,192 @@
   
     
     <entry>
-      <title>seo</title>
+      <title>jquery搭建</title>
+      <link href="/2019/09/12/jquerygo/"/>
+      <url>/2019/09/12/jquerygo/</url>
+      
+        <content type="html"><![CDATA[<p>　　description</p><p>　　jQuery，顾名思义，<span style="color: #ff0000;">也就是JavaScript和Query(查询)，即辅助JavaScript开发的库。jQuery是一个快速、简洁的JavaScript框架</span>，是继Prototype之后又一个优秀的JavaScript代码库(或JavaScript框架)。jQuery设计的<span style="color: #ff0000;">宗旨是&ldquo;write Less，Do More&rdquo;</span>，即倡导写更少的代码，做更多的事情。<span style="color: #ff0000;">它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互，jQuery的理念就是&ldquo;write less do more&rdquo;。</span></p><p>　　jQuery库文件有2个版本，分别是1.x版本和2.x版本。但是<span style="color: #ff0000;">1.x版本支持IE6、IE7和IE8，而2.x则不再支持，</span>目前依旧有很多人在使用的6/7/8等的版本，市场依旧很大，所以最新的版本不一定是最好的，所以建议使用1.x版本的，jQuery库文件其实有2种类型：(1)开发版;(2)发布版。开发版是没有经过压缩的，供给我们学习jQuery的源码使用，一般用jquery.js命名。而发布版是经过压缩的，供给我们使用jQuery，一般用jquery.min.js命名，我们开发用的一般都是压缩的版本。</p><p>　　那么该如何安装jQuery呢?其实很简单，跟CSS的引入是一样的，只是自己的写的jq的代码必须写在引入源码的下面才会有效，否则是无效的，必须是这种模式：</p><div class="cnblogs_code"><pre><span style="color: #008000;">&lt;!--</span><span style="color: #008000;">jQuery库</span><span style="color: #008000;">--&gt;</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #ff0000;"> src</span><span style="color: #0000ff;">="jquery-1.11.3.min.js"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script  </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span>    <span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;">这里编写你的jQuery代码</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre></div><p>　　其实还有其他的方式引入，这种方式也很多人用，就是直接引入，主要有以下几个方式：Staticfile CDN、又拍云、新浪、谷歌或微软引用 jQuery</p><p>　　Staticfile CDN:</p><div class="cnblogs_code"><pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre></div><p>　　又拍云 CDN:</p><div class="cnblogs_code"><pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre></div><p>　　百度 CDN：</p><div class="cnblogs_code"><pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre></div><p>　　新浪 CDN:</p><div class="cnblogs_code"><pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre></div><p>　　Google CDN:</p><div class="cnblogs_code"><pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre></div><p>　　这些方式的引入会从缓存中加载 jQuery，这样可以减少加载时间。同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jquery </tag>
+            
+            <tag> 前端框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SEO基础知识</title>
+      <link href="/2019/09/11/seoknowledge/"/>
+      <url>/2019/09/11/seoknowledge/</url>
+      
+        <content type="html"><![CDATA[   <p style="text-indent:2em;"><strong>SEO：</strong></p><p>　　SEO是由英文Search Engine Optimization缩写而来， 中文意译为“搜索引擎优化”!SEO是指通过对网站进行站内优化和修复(网站Web结构调整、网站内容建设、网站代码优化和编码等)和站外优化，从而提高网站的网站关键词排名以及公司产品的曝光度。</p><p>　　通过搜索引擎查找信息是当今网民们寻找网上信息和资源的主要手段。搜索引擎营销已经成为网络营销最重要的组成部分。</p><p>　　<strong>百度蜘蛛：</strong></p><p>　　百度蜘蛛，是百度搜索引擎的一个自动程序。它的作用是访问收集整理互联网上的网页、图片、视频等内容，然后分门别类建立索引数据库， 使用户能在百度搜索引擎中搜索到您网站的网页、图片、视频等内容。</p><p>　　<strong>百度排名原理：</strong></p><p>　　1.爬行和抓取：搜索引擎蜘蛛通过跟踪链接访问网页，获得页面HTML代码存入数据库</p><p>　　2.预处理：索引程序对抓取来的页面数据进行文字提取、中文分词、索引等处理，以备篇程序调用</p><p>　　3.排名：用户输入关键词后排名程序调用索引库数据，计算相关性，然后按一定的形式生成搜索结果页面</p><p>　　<strong>Title(网站标题)：</strong></p><p>　　尽量控制在60个字节也就是30个汉字以内，含有关键词数量2-3为佳，能让人一目了然的标题有利于提高用户体验。</p><p>　　通用符号：_ — , |</p><p>　　实例：</p><p>　　1.站长论坛 - 中国站长最爱上的论坛 bbs.chinaz.com</p><p>　　2. 笑话,幽默笑话,冷笑话,搞笑图片 - 捧腹网</p><p>　　(以上两个标题第一眼是否可以知道这个网站是做什么的(用户体验)，关键词布置也是妥妥的。)</p><p>　　关键词定位：选取关键词是一件很复杂的事情，定位网站的方向，一般手段通过输入关键词词，查看相关页面从而判断相关性。</p><p>　　指数越高竞争性越大</p><p>　　keywords(关键词)</p><p>　　写法：一般情况关键词不能超过7个; 3、4个为佳。</p><p>　　一般写法：泛词+2个核心关键词+3个长尾词</p><p>　　<strong>关键词的分类</strong></p><p>　　泛关键词：指那些搜索量很大，模板很不准的词语，通常都是代表一个行业或者一个事物。比如IT，优化，电子等。</p><p>　　核心关键词：指与网站主题最简单的词语同时也是搜索量最高的词语。比如seo优化、seo论坛等。</p><p>　　问题关键词：指用户在使用我们产品或者是解决跟产品相关问题的时候搜索的关键词，通常在网站资讯页面优化，需大力推广，单独问题分类优化。比如：我是网站首页被k了怎么办?</p><p>　　相关关键词：指跟目标关键词存在着一定相关的关系能够延伸或者细化它的定义，或者是当用户搜索某个关键词时搜索引擎对其进行相关推荐的关键词。比如，你是怎么什么优化的，那么网站相关关键词可以是优化、IT、站长等。</p><p>　　长尾关键词：指关键词比较长，往往是2-3个词组成，甚至是短语，存在于内容页面，除了内容页的标题，还存在于内容中，搜索量非常少，并且不稳定。 比如，seo优化论坛、优化论坛怎么样等。</p><p>　　description(描述)</p><p>　　相对来说这个对优化没有特别的好处，一般情况下围绕着关键词词写就可以了。</p><p>　　<strong>网站整体权重分布</strong></p><p>　　首页高于栏目、栏目高于内容(首页-栏目-内容)</p><p>　　根据搜索引擎原理，权重的传递是根据网站的层次。离首页越近，所传递的权值也就越多</p><p>　　链接：</p><p>　　可以把互联网想象为一个蜘蛛编制的大网，链接就是串联蜘蛛网的线。也就是让网站串联起来的意思。</p><p>　　反链：友情链接，单向链接(反链&gt;友链)</p><p>　　内链：同一个域名下的页面之间做相互链接。</p><p>　　作用：有助于提高搜索引擎对网站的爬行索引效率，有利于网站的收录。</p><p>　　外链：外链就是指在别的网站导入自己网站的链接。</p><p>　　在我看来链接就是为了提升网站权重、排名、流量的作用，当然链接已“高质量”链接为佳。垃圾外链毫无作用说不准还有副作用。</p><p>　　<strong>关于内容方面</strong></p><p>　　1.原创性文章</p><p>　　好处：网站的原创内容，对于搜索引擎来说，就是一个新鲜的事物，会根据这篇原创文章的可读性与能否满足客户所需求而去评定文章的质量。</p><p>　　这是一份劳苦功高的事情，原创就是靠自己写?(最近的飓风算法极度支持原创)</p><p>　　2.伪原创文章：</p><p>　　A.标题伪原创</p><p>　　1) 数字替换(比如说：“加盟9大优势”可以改为“加盟的6大优势” 相应的内容需要排除3条你觉得没有必要的)</p><p>　　2) 词语替换(比如说“给女朋友的感人情话”可以替换的词语有“女朋友、感人”都是用词语替换。)</p><p>　　B.内容伪愿创(改头+锚文本+插图+乱顺序+改尾)</p><p>　　1)段头：可以总结一下内容的大概意思，自己编写一小段话</p><p>　　2)描文本：描文本对排名有一定的影响力还有一个比较贱的作用就是：“在别人采集你的文章的时候会把你的链接也采集过去”一般情况下一篇文章加3-5个描文本即可。</p><p>　　3)插入与文章具有相关性的图片，百度是没法读取图片表达的是什么，所以图片的alt属性就起着很大的作用(作用：就是告诉百度这张图片是什么东西)</p><p>　　4)在不影响阅读情况下调整内容的段落顺序，当然在逻辑紧密的内容中基本都用不上。</p><p>　　5)用一段话来总结这篇内容。</p><p>　　C.整合性文章</p><p>　　类似前景加盟专题那一种，把单一的内容“多个”整合成一篇新的文章内容，这种类型的相关性比较强。</p><p>　　飘红率：内容原创度</p><p>　　推荐工具：斗牛文章原创性检查</p><p>　　下载地址：<a href="http://www.douniu.la/" target="_blank" rel="noopener">http://www.douniu.la/</a></p><p>　　1. 基础：落地页(关键词所在的页面完善)</p><p>　　2. 站内站外吸引蜘蛛爬取(站内包括文章、专题、新闻……)</p><p>　　↓↓↓以下内容取自百度学院</p><p>　　<strong>1.选取关键词</strong></p><p>　　选取关键词一般情况会考虑热度因素，然而并非指数越高越好，热度高相对竞争激烈，很多网站都会检索量稍低一点的关键词。百度指数(<a href="http://index.baidu.com/" target="_blank" rel="noopener">http://index.baidu.com/</a>)</p><p>　　<strong>2.关键词的代替性</strong></p><p>　　同一个事物有多个说法，同一件事也可能有多种表现形式</p><p>　　例如：“SEO”又叫“百度搜索引擎优化”在存在这种多义词情况下编辑做内容关键词时间可以考虑选取“亲民”的一个关键词为内容的关键词。(可以通过指数来查看更多人喜好)</p><p>　　(SEO指数9340;百度搜索引擎优化指数400)</p><p>　　<strong>3.标题主次与内容相关性</strong></p><p>　　一个标题的构成一般由多个关键词组成，搜索引擎会自动识别你标题中最重要的关键词找，并认为该关键词为网页的主题内容。主次方面一般情况下是靠前的为主。</p><p>　　例如：“玫瑰花用来泡水对身体有什么好处”，关键词构成部分：玫瑰花+泡水+身体….在这种情况下搜索引擎会“玫瑰花”是这篇内容的主体，其它诸如“相关文章”的栏目，可以考虑多放一些与玫瑰花有关的文章，一来增加网页的相关性，二来可以吸引用户更多的点击。</p><p>　　<strong>4.搜索引擎对页面结构的划分</strong></p><p>　　了解搜索引擎对页面结构的划分：通常来说，一个网页往往由几个模块组成，正文占据重要位置已无需多言，网页的两侧被称为边框(很多网页往往只有右边框)的重要性则远逊于正文。与上一点相结合来看，与“百合”有关的“相关内容”最好放在正文下方，而与“玫瑰花”有间接关系的、如“水仙花”“百合花”等则更适合放在边框位置，不干扰搜索引擎对网页的判断，同时也能起到吸引用户点击的作用。</p><p>　　<strong>网页标题该怎么写?</strong></p><p>　　标题的结构</p><p>　　1.标题字数控制在60个字节内：从以往的经验看，检索用户比较喜欢50个字节左右的标题;对于产品人员和编辑来说，过短的标题有可能无法全面表达网页主题;对于搜索引擎来说，标题过长意味着“超标”，只会保留前60个字节的内容。</p><p>　　【反面例子】福州到北京旅游北京旅游天气如何北京旅游景点介绍北京好玩吗现在去北京旅游会热吗</p><p>　　2.重要内容放在标题的最前面：在众多检索结果中，用户的目光往往聚焦在标题前半段，所以重要信息内容放在标题前部非常重要。</p><p>　　【正面教程】关之琳否认脑癌发作 称洗牙遭误会|关之琳|癌症_凤凰娱乐</p><p>　　3.放置网站名称，增加曝光机会：有些站点已经在某领域有了一定的知名度和权威性，其站名名称已经成为一种品牌，可以将该品牌词体现在标题中，用户在面对众多结果时，更倾向于选择点击自己熟知网站提供的信息。即使网站目前的知名度还不够，更不应该放过每个品牌曝光的机会。</p><p>　　【正面例子】法国卢浮宫博物馆藏文物精品在中国国家博物馆展出-新华网</p><p>　　<strong>标题放什么内容更吸引用户</strong></p><p>　　用户在百度搜索框输入关键词后，百度在对相关网页进行排序时，网页标题内容是其考虑的重要因素。同时，搜索结果页内通常会有10个结果，用户往往是通过标题和摘要来决定要点击开哪个结果。标题上关键词的选择至关重要。</p><p>　　1.与网页内容最相关的关键词：首先，标题应该和网页内容相对应，即标题上的内容，可以在网页主体部分得到展示。一般来说，如果网页主要部分是一篇文章，网页标题的主要内容往往是文章标题;如果网页是一个综合信息的集合页，我们也要找到这些信息的共同点，通过一两个关键词将其表现在网页标题上。</p><p>　　【正面例子】婴儿哭闹的原因婴儿期0-1岁育儿知识_宝宝树</p><p>　　2.选择用户更常用的关键词：同一个物品有不同的名称、同一件事情也有不同的描述，选择哪个放在title上呢?虽然百度有强大的关键词分析算法，但我们还是推荐大家使用搜索引擎用户最常用的那个。关键词的热度可以通过百度指数进行查询，目前网络上还有一些其它工具，大家也可以参考一下。</p><p>　　例如佳能有一款单反相机，标准全称是“5d mark ii”，简称“5D2”，广大搜索爱好者亲切地称之为“无敌兔”。从字面上看，“5d mark ii”输入起来比较麻烦。</p><p>　　对比一下它们的搜索指数：</p><p>　　“5d mark ii”：257</p><p>　　“5D2”：875</p><p>　　“无敌兔”:467</p><p>　　很明显，“5D2”由于指向清晰、朗朗上口且容易输入，最受搜索引擎用户喜爱</p><p>　　3.选择能满足用户明确需求的关键词：能体现用户明确需求的关键词往往字数偏长，SEO人员一般称此为长尾关键词，如“杭州两日游路线”“从上海到西塘怎么走”等。我们的产品人员和编辑应该一方面了解用户需求，一方面制作可以满足用户需求的网页，通过将含有用户明确需求的关键词写在标题上来吸引搜索引擎用户的点击。</p><p>　　【正面例子】 【宝宝补锌】儿童缺锌怎么办_怎样给孩子补锌-摇篮网</p><p>　　4.在真实的前提下体现时效性：在标题放时效性关键词最重要的前提是：网页里真的有时效性内容，否则非常容易被搜索引擎惩罚。</p><p>　　【正面例子】2014-10月8万套北京北京二手房价格,真房价没水分!「链家」</p><p>　　5.直击用户痛点，引发共鸣：还以上面那个案例为例，虚假房源和房价一直是二手房买方心中的痛，“2014-10月8万套北京北京二手房价格,真房价没水分!「链家」”直面用户痛点，再配上“链家”的招牌，点击率一直居高不下。当然，这已经超越了SEO的范畴，相信编辑人员在这方面有更多经验。</p><p>　　设计标题时避免做下面的事情</p><p>　　1.欺骗用户和搜索引擎：有些网站在标题上放置过多重复意义的关键词，甚至放置与内容无关的热门关键词以吸引甚至欺骗用户和搜索引擎，这样很容易被搜索引擎判为作弊而受到惩罚，是一件非常危险的事情。所以：千万不要在标题中体现网页内没有的内容。</p><p>　　【反面例子】青蛇完整青蛇完整全集在线观看青蛇完整完整版视频——该网页仅仅提供了片花视频</p><p>　　【反面例子】李小璐不雅视频引撞脸门 2万抵3万拒绝“撞楼”——该网页主要介绍的是楼盘信息</p><p>　　2.避免多网页使用同一个标题：原则上每个网页都应该有自己独特的标题，如果整个网站的标题全部一致，将失去向搜索引擎表达含义的重要机会</p><p>　　(注：资源来源于网络整理，如有侵权，可点击右侧在线沟通联系删除)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网站知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SEO </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL存储引擎的介绍</title>
+      <link href="/2019/09/10/mysqlmemory/"/>
+      <url>/2019/09/10/mysqlmemory/</url>
+      
+        <content type="html"><![CDATA[<p>　　　数据库存储引擎是数据库底层软件组件，数据库管理系统使用数据引擎进行创建、查询、更新和删除数据操作。不同的存储引擎提供不同的存储机制、索引技巧、锁定水平等功能，使用不同的存储引擎还可以获得特定的功能。</p><p>　　现在许多数据库管理系统都支持多种不同的存储引擎。MySQL 的核心就是存储引擎。</p><p>　　如创建一个InnoDB类型的表：</p><p>　　CREATE TABLE <code>yingqing</code> (</p><p>　　<code>goods_id</code> int(11) NOT NULL AUTO_INCREMENT,</p><p>　　<code>goods_name</code> varchar(30) NOT NULL DEFAULT ‘0’,</p><p>　　<code>goods_number</code> int(11) NOT NULL DEFAULT ‘0’,</p><p>　　<code>shop_price</code> varchar(30) NOT NULL DEFAULT ‘0’,</p><p>　　<code>market_price</code> varchar(30) NOT NULL DEFAULT ‘0’,</p><p>　　<code>click_count</code> bigint(20) NOT NULL DEFAULT ‘0’,</p><p>　　PRIMARY KEY (<code>goods_id</code>)</p><p>　　)</p><p>　　ENGINE=InnoDB DEFAULT CHARSET=utf8;</p><p>　　下面为大家介绍一下mysql常用的存储引擎：</p><p>　　MyISAM：MySQL 5.0 之前的默认数据库引擎，最为常用。拥有较高的插入，查询速度，但不支持事务</p><p>　　InnoDB：事务型数据库的首选引擎，支持ACID事务，支持行级锁定, MySQL 5.5 起成为默认数据库引擎</p><p>　　BDB：源自 Berkeley DB，事务型数据库的另一种选择，支持Commit 和Rollback 等其他事务特性</p><p>　　Memory：所有数据置于内存的存储引擎，拥有极高的插入，更新和查询效率。但是会占用和数据量成正比的内存空间。并且其内容会在 MySQL 重新启动时丢失</p><p>　　Merge：将一定数量的 MyISAM 表联合而成一个整体，在超大规模数据存储时很有用</p><p>　　Archive：非常适合存储大量的独立的，作为历史记录的数据。因为它们不经常被读取。Archive 拥有高效的插入速度，但其对查询的支持相对较差</p><p>　　Federated：将不同的 MySQL 服务器联合起来，逻辑上组成一个完整的数据库。非常适合分布式应用</p><p>　　Cluster/NDB：高冗余的存储引擎，用多台数据机器联合提供服务以提高整体性能和安全性。适合数据量大，安全和性能要求高的应用</p><p>　　CSV： 逻辑上由逗号分割数据的存储引擎。它会在数据库子目录里为每个数据表创建一个 .csv 文件。这是一种普通文本文件，每个数据行占用一个文本行。CSV 存储引擎不支持索引。</p><p>　　BlackHole：黑洞引擎，写入的任何数据都会消失，一般用于记录 binlog 做复制的中继</p><p>　　EXAMPLE ：存储引擎是一个不做任何事情的存根引擎。它的目的是作为 MySQL 源代码中的一个例子，用来演示如何开始编写一个新存储引擎。同样，它的主要兴趣是对开发者。EXAMPLE 存储引擎不支持编索引。</p><p>　　同一个数据库也可以使用多种存储引擎的表。如果一个表要求比较高的事务处理，可以选择InnoDB。这个数据库中可以将查询要求比较高的表选择MyISAM存储。如果该数据库需要一个用于查询的临时表，可以选择MEMORY存储引擎。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>mysql建表常用命令</title>
+      <link href="/2019/09/10/mysqlcreate/"/>
+      <url>/2019/09/10/mysqlcreate/</url>
+      
+        <content type="html"><![CDATA[<p>　　MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。MySQL 是最流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。</p><p>　　MySQL是一种关系数据库管理系统，关系数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。</p><p>　　这里为大家介绍一下mysql在建表过程中经常用到的命令：</p><p>　　修改表名：rename table 原表名 to 现表名;</p><p>　　增加表的一列：alter table 表名 add 列名 列名类型;</p><p>　　修改表的一列：alter table 表名 change 原列名 现列名 类型</p><p>　　修改表的字符集 alter table 表名 character set utf8</p><p>　　修改表的一个字段类型 alter table 表名 MODIFY age int;</p><p>　　查看表的创建细节：show create table 表名</p><p>　　删除一列：alter table 表名 drop 字段</p><p>　　删除表：drop table 表名</p><p>　　创建数据表：</p><p>　　先进入一个数据库，然后创建表：</p><p>　　create table (表名)(</p><p>　　列名1 列类型 [约束],</p><p>　　列名2 列类型 [约束],</p><p>　　...</p><p>　　列名n 列类型 [约束]</p><p>　　);</p><p>　　如：</p><p>　　create table song(</p><p>　　id bigint，</p><p>　　name varchar(20),</p><p>　　age int</p><p>　　);</p><p>　　代码例子：</p><div class="cnblogs_code"><pre><span style="color: #008080;"> 1</span> <span style="color: #008000;">/*</span><span style="color: #008000;">创建表</span><span style="color: #008000;">*/</span><span style="color: #008080;"> 2</span> <span style="color: #000000;">create table stu(</span><span style="color: #008080;"> 4</span>     id  int unsigned NOT <span style="color: #0000ff;">NULL</span> PRIMARY <span style="color: #008080;">KEY</span>,<span style="color: #008080;"> 5</span>     name VARCHAR(20) NOT <span style="color: #0000ff;">NULL</span> <span style="color: #0000ff;">DEFAULT</span> '0',<span style="color: #008080;"> 6</span>     age int unsigned NOT <span style="color: #0000ff;">NULL</span> <span style="color: #0000ff;">DEFAULT</span> '0'<span style="color: #008080;"> 7</span> <span style="color: #000000;">);</span><span style="color: #008080;"> 8</span> <span style="color: #008080;">10</span> <span style="color: #008000;">/*</span><span style="color: #008000;">查看表的结构</span><span style="color: #008000;">*/</span><span style="color: #008080;">11</span> <span style="color: #000000;">desc stu;</span><span style="color: #008080;">12</span> <span style="color: #008080;">13</span> <span style="color: #008000;">/*</span><span style="color: #008000;">修改表名</span><span style="color: #008000;">*/</span><span style="color: #008080;">14</span> <span style="color: #008080;">rename</span><span style="color: #000000;"> table stu to xuesheng;</span><span style="color: #008080;">15</span> <span style="color: #008080;">16</span> <span style="color: #008000;">/*</span><span style="color: #008000;">添加一列</span><span style="color: #008000;">*/</span><span style="color: #008080;">17</span> alter table xuesheng add sex varchar(20<span style="color: #000000;">)</span><span style="color: #008080;">18</span> <span style="color: #008080;">19</span> <span style="color: #008000;">/*</span><span style="color: #008000;">修改表的列名</span><span style="color: #008000;">*/</span><span style="color: #008080;">20</span> alter table xuesheng change sex  sexual VARCHAR(20<span style="color: #000000;">)</span><span style="color: #008080;">21</span> <span style="color: #008080;">22</span> <span style="color: #008000;">/*</span><span style="color: #008000;">修改表的一个字段类型</span><span style="color: #008000;">*/</span><span style="color: #008080;">23</span> <span style="color: #000000;">alter table xuesheng MODIFY age int;</span><span style="color: #008080;">24</span> <span style="color: #008080;">25</span> <span style="color: #008000;">/*</span><span style="color: #008000;">修改表的字符集为utf8</span><span style="color: #008000;">*/</span><span style="color: #008080;">26</span> <span style="color: #000000;">alter table xuesheng character set utf8</span><span style="color: #008080;">27</span> <span style="color: #008080;">28</span> <span style="color: #000000;">create table zhujian1 (</span><span style="color: #008080;">29</span>   uid int PRIMARY <span style="color: #008080;">KEY</span>, <span style="color: #008000;">/*</span><span style="color: #008000;"> 设置主键 </span><span style="color: #008000;">*/</span><span style="color: #008080;">30</span>   xingming  varchar(20) not <span style="color: #0000ff;">null</span> <span style="color: #0000ff;">DEFAULT</span> '',  <span style="color: #008000;">/*</span><span style="color: #008000;"> 不为null </span><span style="color: #008000;">*/</span><span style="color: #008080;">31</span>    age varchar(20) not <span style="color: #0000ff;">null</span> <span style="color: #0000ff;">default</span> '' <span style="color: #008000;">/*</span><span style="color: #008000;"> 不为null </span><span style="color: #008000;">*/</span><span style="color: #008080;">32</span> <span style="color: #000000;">);</span><span style="color: #008080;">33</span> <span style="color: #008080;">34</span> <span style="color: #008080;">35</span> <span style="color: #008000;">/*</span><span style="color: #008000;">创建表</span><span style="color: #008000;">*/</span><span style="color: #008080;">36</span> <span style="color: #000000;">create table zhujian3 (</span><span style="color: #008080;">37</span>   uid int PRIMARY <span style="color: #008080;">KEY</span>  AUTO_INCREMENT,  <span style="color: #008000;">/*</span><span style="color: #008000;"> 设置主键，自增 </span><span style="color: #008000;">*/</span><span style="color: #008080;">38</span>   xingming  varchar(20) not <span style="color: #0000ff;">null</span> <span style="color: #0000ff;">DEFAULT</span> '',  <span style="color: #008000;">/*</span><span style="color: #008000;"> 不为null </span><span style="color: #008000;">*/</span><span style="color: #008080;">39</span>    age varchar(20) not <span style="color: #0000ff;">null</span> <span style="color: #0000ff;">default</span> ''   <span style="color: #008000;">/*</span><span style="color: #008000;"> 不为null </span><span style="color: #008000;">*/</span><span style="color: #008080;">40</span> <span style="color: #000000;">)</span><span style="color: #008080;">41</span> <span style="color: #008080;">42</span> ENGINE=InnoDB <span style="color: #0000ff;">DEFAULT</span> CHARSET=<span style="color: #000000;">utf8;</span><span style="color: #008080;">43</span> <span style="color: #008080;">44</span> <span style="color: #008080;">45</span> <span style="color: #000000;">create table good1s (</span><span style="color: #008080;">46</span>    goods_id int PRIMARY <span style="color: #008080;">KEY</span> AUTO_INCREMENT,<span style="color: #008080;">47</span>    goods_name varchar(30) not <span style="color: #0000ff;">null</span> <span style="color: #0000ff;">DEFAULT</span> '0',<span style="color: #008080;">48</span>    goods_number int not <span style="color: #0000ff;">null</span> <span style="color: #0000ff;">DEFAULT</span> '0',<span style="color: #008080;">49</span>    shop_price varchar(30) not <span style="color: #0000ff;">null</span> <span style="color: #0000ff;">DEFAULT</span> '0',<span style="color: #008080;">50</span>    market_price varchar(30) not <span style="color: #0000ff;">null</span> <span style="color: #0000ff;">DEFAULT</span> '0',<span style="color: #008080;">51</span>    click_count bigint  not <span style="color: #0000ff;">null</span> <span style="color: #0000ff;">DEFAULT</span> '0'<span style="color: #008080;">52</span> <span style="color: #000000;">)</span><span style="color: #008080;">53</span> ENGINE=InnoDB <span style="color: #0000ff;">DEFAULT</span> CHARSET=utf8;</pre></div><p>　　MySQL所使用的 SQL 语言是用于访问数据库的最常用标准化语言。MySQL 软件采用了双授权政策，分为社区版和商业版，由于其体积小、速度快、总体拥有成本低，尤其是开放源码这一特点，一般中小型网站的开发都选择 MySQL 作为网站数据库。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>display用法</title>
+      <link href="/2019/09/09/display%E7%94%A8%E6%B3%95/"/>
+      <url>/2019/09/09/display%E7%94%A8%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>　　display这个属性用于定义建立布局时元素生成的显示框类型。对于 HTML 等文档类型，如果使用 display 不谨慎会很危险，因为可能违反 HTML 中已经定义的显示层次结构。对于 XML，由于 XML 没有内置的这种层次结构，所有 display 是绝对必要的,要了解display之前，来了解一些块级元素和内联元素。</p><p>　　<strong>1、块级元素</strong></p><p>　　①总是在新行上开始(块元素独占一行);</p><p>　　②高度，行高以及外边距和内边距都可控制;</p><p>　　③宽度缺省是它的容器的100%，除非设定一个宽度。</p><p>　　④它可以容纳内联元素和其他块元素</p><p>　　比如：p、div、h1、ul等。</p><p>　　<strong>1、内联元素</strong></p><p>　　①和其他元素都在一行上;</p><p>　　②高，行高及外边距和内边距不可改变;</p><p>　　③宽度就是它的文字或图片的宽度，不可改变</p><p>　　④内联元素只能容纳文本或者其他内联元素</p><p>　　比如：a、em、img、span等。</p><p>　　而display就是改变这些元素的固有属性，规定元素应该生成的类型，以达到自己布局网站的效果。 经常用到有下面四个：</p><p>　　none 此元素不会被显示</p><p>　　block 此元素将显示为块级元素，此元素前后会带有换行符。</p><p>　　inline 默认。此元素会被显示为内联元素，元素前后没有换行符。</p><p>　　inline-block 行内块元素。</p><p>　　当然还有很多属性，一般比较少用，主要有以下方面：　　</p><pre><code>list-item：此元素会作为列表显示。run-in：此元素会根据上下文作为块级元素或内联元素显示。compact：CSS 中有值 compact，不过由于缺乏广泛支持，已经从 CSS2.1 中删除。marker：CSS 中有值 marker，不过由于缺乏广泛支持，已经从 CSS2.1 中删除。table：此元素会作为块级表格来显示（类似 &lt;table&gt;），表格前后带有换行符。inline-table：此元素会作为内联表格来显示（类似 &lt;table&gt;），表格前后没有换行符。table-row-group：此元素会作为一个或多个行的分组来显示（类似 &lt;tbody&gt;）。table-header-group：此元素会作为一个或多个行的分组来显示（类似 &lt;thead&gt;）。table-footer-group：此元素会作为一个或多个行的分组来显示（类似 &lt;tfoot&gt;）。table-row：此元素会作为一个表格行显示（类似 &lt;tr&gt;）。table-column-group：此元素会作为一个或多个列的分组来显示（类似 &lt;colgroup&gt;）。table-column：此元素会作为一个单元格列显示（类似 &lt;col&gt;）table-cell：此元素会作为一个表格单元格显示（类似 &lt;td&gt; 和 &lt;th&gt;）table-caption：此元素会作为一个表格标题显示（类似 &lt;caption&gt;）inherit：规定应该从父元素继承 display 属性的值。</code></pre><p>　　display 属性规定元素应该生成的框的类型,用的最多的就是display:block;显示 display:none;隐藏。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ubuntu安装mysql数据库方法</title>
+      <link href="/2019/09/09/ubuntulianjiefangshi/"/>
+      <url>/2019/09/09/ubuntulianjiefangshi/</url>
+      
+        <content type="html"><![CDATA[<p>　　ubuntu基于linux的免费开源桌面PC操作系统，十分契合英特尔的超极本定位，支持x86、64位和ppc架构。一个比较流行的Linux操作系统，不仅简单易用，而且和Windows相容性非常好。那么在ubuntu中如何安装mysql数据库呢?</p><p>　　在ubuntu安装mysql主要有以下两种方式：</p><p>　　1.打开Ubuntu Software Center，在右上角的搜索框查询mysql，然后选定MySQL Server，点击安装即可。</p><p>　　2.使用命令安装mysql,毕竟Ubuntu系统主要是以命令为主嘛。</p><p>　　打开ubuntu的终端执行：<span style="color: #ff0000;">sudo apt-get install mysql-server</span></p><p>　　然后可以看到一系列的执行过程，等待一会就安装完成了。</p><p>　　下面进入mysql,跟cmd一样，<span style="color: #ff0000;">mysql -h localhost - u root -p</span> 然后输入sudo的密码即可。</p><p>　　这样就进入ubuntu的数据库了，接着的操作就是数据库的常规操作了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>meta大全</title>
+      <link href="/2019/09/09/meta%E5%A4%A7%E5%85%A8/"/>
+      <url>/2019/09/09/meta%E5%A4%A7%E5%85%A8/</url>
+      
+        <content type="html"><![CDATA[<p>　　meta是html文档在head标签里定义的一个对文档进行描述的功能性标签。</p><p>　　它并不是一个可以显示在网页的标签属性，但对于整个网页来说却是至关重要的，特别是对于SEO优化来说更是如此，它描述了作者、日期和时间、网页描述、关键词、页面刷新等相关信息，在有关搜索引擎注册、搜索引擎优化排名等网络营销方法内容中，通常都要谈论meta标签的作用，合理利用meta标签的description和keywords属性，加入网站关键词或者网页的关键字信息，可使网站更加贴近用户体验。</p><p>　　meta标签主要有下面的作用：</p><p>　　1.搜索引擎优化（SEO）</p><p>　　2.定义页面使用语言</p><p>　　3.自动刷新并指向新的页面</p><p>　　4.实现网页转换时的动态效果</p><p>　　5.控制页面缓冲</p><p>　　6.网页定级评价</p><p>　　7.控制网页显示的窗口</p><p>　　META标签可分为两大部分：HTTP-EQUIV和NAME变量。</p><p>　　HTTP实例</p><p>　　HTML代码实例中有一项内容是</p><p>　　&lt;meta http-equiv=”Content-Type”content=”text/html;charset=gb2312”&gt;</p><p>　　其作用是指定了当前文档所使用的字符编码为gb2312，也就是中文简体字符。根据这一行代码，浏览器就可以识别出这个网页应该用中文简体字符显示。类似地，如果将”gb2312”换为”big5”，就是我们熟知的中文繁体字符了。</p><p>　　HTTP使用方法</p><pre><code> &lt;meta http-equiv=&quot;Content-Type&quot;content=&quot;text/html;charset=gb_2312-80&quot;&gt;  &lt;meta http-equiv=&quot;Content-Language&quot;content=&quot;zh-CN&quot;&gt; &lt;!-- 用以说明主页制作所使用的文字以及语言；又如英文是ISO-8859-1字符集，还有BIG5、utf-8、shift-Jis、Euc、Koi8-2等字符集； --&gt; &lt;meta http-equiv=&quot;Refresh&quot;content=&quot;n;url=http://yourlink&quot;&gt; &lt;!-- 定时让网页在指定的时间n内，跳转到你的页面； --&gt;&lt;meta http-equiv=&quot;Expires&quot;content=&quot;Mon,12May200100:20:00GMT&quot;&gt;&lt;!-- 可以用于设定网页的到期时间，一旦过期则必须到服务器上重新调用。需要注意的是必须使用GMT时间格式； --&gt;</code></pre><p>　　  &lt;meta http-equiv=”Pragma”content=”no-cache”&gt;<br>     <!-- 是用于设定禁止浏览器从本地机的缓存中调阅页面内容，设定后一旦离开网页就无法从Cache中再调出； --><br>　　  &lt;meta http-equiv=”set-cookie”content=”Mon,12May200100:20:00GMT”&gt;<br>     <!--cookie设定，如果网页过期，存盘的cookie将被删除。需要注意的也是必须使用GMT时间格式； --><br>　　 &lt;meta http-equiv=”Pics-label”content=””&gt;<br>     <!-- 网页等级评定，在IE的internet选项中有一项内容设置，可以防止浏览一些受限制的网站，而网站的限制级别就是通过meta属性来设置的； --><br>　   &lt;meta http-equiv=”windows-Target”content=”_top”&gt;<br>    <!-- 强制页面在当前窗口中以独立页面显示，可以防止自己的网页被别人当作一个frame页调用； --><br>    &lt;meta http-equiv=”Page-Enter”content=”revealTrans（duration=10,transition=50）”&gt;<br>    &lt;meta http-equiv=”Page-Exit”content=”revealTrans（duration=20，transition=6）”&gt;<br>    <!-- 设定进入和离开页面时的特殊效果，这个功能即FrontPage中的"格式/网页过渡"，不过所加的页面不能够是一个frame页面。 --><br>　　HTTP-EQUIV用于向浏览器提供一些说明信息，从而可以根据这些说明做出反应。HTTP-EQUIV其实并不仅仅只有说明网页的字符编码这一个作用，常用的HTTP-EQUIV类型还包括：网页到期时间、默认的脚本语言、默认的风格页语言、网页自动刷新时间等。</p><pre><code>网页描述方法</code></pre><p>　　1、网页描述为自然语言而不是罗列关键词（与keywords设计正好相反）；</p><p>　　2、尽可能准确地描述网页的核心内容，通常为网页内容的摘要信息，也就是希望搜索引擎在检索结果中展示的摘要信息；</p><p>　　3、网页描述中含有有效关键词；</p><p>　　4、网页描述内容与网页标题内容有高度相关性；</p><p>　　5、网页描述内容与网页主体内容有高度相关性；</p><p>　　6、网页描述的文字不必太多，一般不超过搜索引擎检索结果摘要信息的最多字数（通常在100中文字之内，不同搜索引擎略有差异）。</p> <meta name="description" content="网络营销教学网站提供《网络营销基础与实践》教学支持:网络营销课件">　　"description"中的content="网页描述"，是对一个网页概况的介绍，这些信息可能会在搜索结果中出现，因此需要根据网页的实际情况来设计，尽量避免与网页内容不相关的“描述”，<pre><code>经常用到的主要有以下几种： &lt;!-- 判断字符集，一般是utf-8 --&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;!-- 作者 --&gt; &lt;meta name=&quot;author&quot; content=&quot;https://www.cnblogs.com/songtianfa/&quot;&gt; &lt;!-- 网页描述 --&gt; &lt;meta name=&quot;description&quot; content=&quot;码农下的天空 - 博客园&quot;&gt; &lt;!-- 关键字 --&gt; &lt;meta name=&quot;keywords&quot; content=&quot;码农下的天空,博客园&quot;&gt; &lt;!-- 设定网页到期时间，一旦网页时间到期，必须到 --&gt; &lt;meta http-equiv=&quot;expires&quot; content=&quot;Wed, 26 Feb 199708 : 21 : 57 GMT&quot;&gt; &lt;!-- 禁止浏览器从本地机的缓存中调阅页面内容 --&gt; &lt;meta http-equiv=&quot;Pragma&quot; content=&quot;no-cache&quot;&gt; &lt;!-- 用来防止别人在框架里调用你的页面 --&gt; &lt;meta http-equiv=&quot;Window-target&quot; content=&quot; top&quot;&gt; &lt;!-- 跳转页面, 5指时间停留5秒网页搜索机器人向导。用来告诉搜索机器人哪些页面需要索引，哪些 页面不需要索引 --&gt; &lt;meta http-equiv=&quot;Refresh&quot; content=&quot;5;URL=https://www.cnblogs.com/songtianfa/&quot;&gt; &lt;!-- content的参数有all,none,index,noindex,follow,nofollow , 默认是all --&gt; &lt;meta name=&quot;robots&quot; content=&quot;none&quot;&gt; &lt;!-- 收藏图标 --&gt; &lt;link rel=&quot;Shortcut Icon&quot; href=&quot;favicon.ico&quot;&gt; &lt;!-- 网页不会被缓存 --&gt; &lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-cache, must-revalidate&quot;&gt; meta标签是HTML标head区的一个关键标签，它位于HTML文档的&lt;head&gt;和&lt;title&gt;之间（有些也不是在&lt;head&gt;和&lt;title&gt;之间）。它提供的信息虽然用户不可见，但却是文档的最基本的元信息。&lt;meta&gt;除了提供文档字符集、使用语言、作者等基本信息外，还涉及对关键词和网页等级的设定。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>seo简介</title>
       <link href="/2019/09/06/seo/"/>
       <url>/2019/09/06/seo/</url>
       
@@ -13,7 +198,7 @@
       
       <categories>
           
-          <category> SEO </category>
+          <category> 网站知识 </category>
           
       </categories>
       
@@ -36,6 +221,27 @@
           
       </categories>
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>搭建hexo+github博客</title>
+      <link href="/2019/09/01/myblog/"/>
+      <url>/2019/09/01/myblog/</url>
+      
+        <content type="html"><![CDATA[<p>　　一直想要搭建一个自己的博客，可是由于各种的原因，都一次又一次的耽搁了，这次在搜索一些资料的时候看到了hexo博客的介绍，饶有兴趣，就进来，于是也开始了github之旅，之前也是了解过并且搭建过github，可惜好多年没有真正的用过，今天又一次的接触了github,，开始搭建了属于自己的hexo+github的博客。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> github </tag>
+            
+        </tags>
       
     </entry>
     

@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>惊风随笔-个人技术分享博客网站</title>
-  <meta name="keywords" content>
-  <meta name="description" content="惊风随笔-个人技术分享博客网站">
+  <title>MySQL存储引擎的介绍 | 惊风随笔-个人技术分享博客网站</title>
+  <meta name="keywords" content=" mysql , 数据库 ">
+  <meta name="description" content="MySQL存储引擎的介绍 | 惊风随笔-个人技术分享博客网站">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="关于惊风：　　潜心研究web前端技术，一边工作一边积累经验，分享一些经验等心得。 　　1. 一个对于”web前端”和”SEO技术”稍有研究，并一直致力于web前端方向的站长。 　　2. 很多时候觉得自己对待任何事都很执着，一旦定了目标，就会不达目标不罢休，永不退缩! 　　3.不管学习什么东西，一定要有属于自己的“学习方法”和善于“对事物的总结”。 　　4.于岁月中前进，抱着一份责任，不要忘记我们出">
 <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -331,12 +331,59 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-mysqlmemory" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-github"><span class="toc-text">hexo+github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于惊风"><span class="toc-text">关于惊风</span></a></li></ol></li></ol>
+        <h1 class="article-title">MySQL存储引擎的介绍</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="数据库">数据库</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color1">mysql</a>
+            
+            <a href="javascript:" class="color4">数据库</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-09-10 15:18:40'>2019-09-10 15:14</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:799</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        
     
 <style>
     .left-col .switch-btn,
@@ -349,28 +396,67 @@
     }
 </style>
 </div>
-            <h1 id="hexo-github"><a href="#hexo-github" class="headerlink" title="hexo+github"></a>hexo+github</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>阮一峰说喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>大多数Blog作者，都停留在第一和第二阶段，因为第三阶段不太容易到达：你很难找到俯首听命、愿意为你管理服务器的人。</p>
-<p>但是现在Github和GitCafe等代码站都提供了Pages功能，只要将写好的文章提交到Github上托管，即可生成独立博客，而且提供几乎不限流量的存储空间，一切都是免费的。一旦搭建好，则只需要负责写文章就行了，不需要过多的管理。这不就是博客的第三阶段吗。</p>
-<h2 id="关于惊风"><a href="#关于惊风" class="headerlink" title="关于惊风"></a>关于惊风</h2><p>到目前为止已经写了<code class="article_number"></code>篇文章  共<code  class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次。</p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　　数据库存储引擎是数据库底层软件组件，数据库管理系统使用数据引擎进行创建、查询、更新和删除数据操作。不同的存储引擎提供不同的存储机制、索引技巧、锁定水平等功能，使用不同的存储引擎还可以获得特定的功能。</p>
+<p>　　现在许多数据库管理系统都支持多种不同的存储引擎。MySQL 的核心就是存储引擎。</p>
+<p>　　如创建一个InnoDB类型的表：</p>
+<p>　　CREATE TABLE <code>yingqing</code> (</p>
+<p>　　<code>goods_id</code> int(11) NOT NULL AUTO_INCREMENT,</p>
+<p>　　<code>goods_name</code> varchar(30) NOT NULL DEFAULT ‘0’,</p>
+<p>　　<code>goods_number</code> int(11) NOT NULL DEFAULT ‘0’,</p>
+<p>　　<code>shop_price</code> varchar(30) NOT NULL DEFAULT ‘0’,</p>
+<p>　　<code>market_price</code> varchar(30) NOT NULL DEFAULT ‘0’,</p>
+<p>　　<code>click_count</code> bigint(20) NOT NULL DEFAULT ‘0’,</p>
+<p>　　PRIMARY KEY (<code>goods_id</code>)</p>
+<p>　　)</p>
+<p>　　ENGINE=InnoDB DEFAULT CHARSET=utf8;</p>
+<p>　　下面为大家介绍一下mysql常用的存储引擎：</p>
+<p>　　MyISAM：MySQL 5.0 之前的默认数据库引擎，最为常用。拥有较高的插入，查询速度，但不支持事务</p>
+<p>　　InnoDB：事务型数据库的首选引擎，支持ACID事务，支持行级锁定, MySQL 5.5 起成为默认数据库引擎</p>
+<p>　　BDB：源自 Berkeley DB，事务型数据库的另一种选择，支持Commit 和Rollback 等其他事务特性</p>
+<p>　　Memory：所有数据置于内存的存储引擎，拥有极高的插入，更新和查询效率。但是会占用和数据量成正比的内存空间。并且其内容会在 MySQL 重新启动时丢失</p>
+<p>　　Merge：将一定数量的 MyISAM 表联合而成一个整体，在超大规模数据存储时很有用</p>
+<p>　　Archive：非常适合存储大量的独立的，作为历史记录的数据。因为它们不经常被读取。Archive 拥有高效的插入速度，但其对查询的支持相对较差</p>
+<p>　　Federated：将不同的 MySQL 服务器联合起来，逻辑上组成一个完整的数据库。非常适合分布式应用</p>
+<p>　　Cluster/NDB：高冗余的存储引擎，用多台数据机器联合提供服务以提高整体性能和安全性。适合数据量大，安全和性能要求高的应用</p>
+<p>　　CSV： 逻辑上由逗号分割数据的存储引擎。它会在数据库子目录里为每个数据表创建一个 .csv 文件。这是一种普通文本文件，每个数据行占用一个文本行。CSV 存储引擎不支持索引。</p>
+<p>　　BlackHole：黑洞引擎，写入的任何数据都会消失，一般用于记录 binlog 做复制的中继</p>
+<p>　　EXAMPLE ：存储引擎是一个不做任何事情的存根引擎。它的目的是作为 MySQL 源代码中的一个例子，用来演示如何开始编写一个新存储引擎。同样，它的主要兴趣是对开发者。EXAMPLE 存储引擎不支持编索引。</p>
+<p>　　同一个数据库也可以使用多种存储引擎的表。如果一个表要求比较高的事务处理，可以选择InnoDB。这个数据库中可以将查询要求比较高的表选择MyISAM存储。如果该数据库需要一个用于查询的临时表，可以选择MEMORY存储引擎。</p>
 
-        </article>
-        
-        <p>
-            <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 2637574117@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>MySQL存储引擎的介绍</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">799</span></p>
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="惊风">惊风</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-09-10, 15:14:23</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-10, 15:18:40</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/10/mysqlmemory/" title="MySQL存储引擎的介绍">http://yoursite.com/2019/09/10/mysqlmemory/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019</p>
