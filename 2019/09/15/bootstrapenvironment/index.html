@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>jquery搭建 | 惊风随笔-个人技术分享博客网站</title>
-  <meta name="keywords" content=" jquery , 前端框架 ">
-  <meta name="description" content="jquery搭建 | 惊风随笔-个人技术分享博客网站">
+  <title>bootstrap环境搭建 | 惊风随笔-个人技术分享博客网站</title>
+  <meta name="keywords" content=" 前端框架 , bootstrap ">
+  <meta name="description" content="bootstrap环境搭建 | 惊风随笔-个人技术分享博客网站">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="关于惊风：　　潜心研究web前端技术，一边工作一边积累经验，分享一些经验等心得。 　　1. 一个对于”web前端”和”SEO技术”稍有研究，并一直致力于web前端方向的站长。 　　2. 很多时候觉得自己对待任何事都很执着，一旦定了目标，就会不达目标不罢休，永不退缩! 　　3.不管学习什么东西，一定要有属于自己的“学习方法”和善于“对事物的总结”。 　　4.于岁月中前进，抱着一份责任，不要忘记我们出">
 <meta property="og:type" content="website">
@@ -377,9 +377,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-jquerygo" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-bootstrapenvironment" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">jquery搭建</h1>
+        <h1 class="article-title">bootstrap环境搭建</h1>
     
     <div class="article-meta">
         
@@ -394,21 +394,21 @@
         
         <span class="tag">
             
-            <a href="javascript:" class="color2">jquery</a>
-            
             <a href="javascript:" class="color5">前端框架</a>
+            
+            <a href="javascript:" class="color5">bootstrap</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-12 16:18:56'>2019-09-12 00:44</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-18 14:33:45'>2019-09-15 14:32</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:674</span>
+        <span>字数:450</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -442,54 +442,51 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　description</p>
-<p>　　jQuery，顾名思义，<span style="color: #ff0000;">也就是JavaScript和Query(查询)，即辅助JavaScript开发的库。jQuery是一个快速、简洁的JavaScript框架</span>，是继Prototype之后又一个优秀的JavaScript代码库(或JavaScript框架)。jQuery设计的<span style="color: #ff0000;">宗旨是&ldquo;write Less，Do More&rdquo;</span>，即倡导写更少的代码，做更多的事情。<span style="color: #ff0000;">它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互，jQuery的理念就是&ldquo;write less do more&rdquo;。</span></p>
-<p>　　jQuery库文件有2个版本，分别是1.x版本和2.x版本。但是<span style="color: #ff0000;">1.x版本支持IE6、IE7和IE8，而2.x则不再支持，</span>目前依旧有很多人在使用的6/7/8等的版本，市场依旧很大，所以最新的版本不一定是最好的，所以建议使用1.x版本的，jQuery库文件其实有2种类型：(1)开发版;(2)发布版。开发版是没有经过压缩的，供给我们学习jQuery的源码使用，一般用jquery.js命名。而发布版是经过压缩的，供给我们使用jQuery，一般用jquery.min.js命名，我们开发用的一般都是压缩的版本。</p>
-<p>　　那么该如何安装jQuery呢?其实很简单，跟CSS的引入是一样的，只是自己的写的jq的代码必须写在引入源码的下面才会有效，否则是无效的，必须是这种模式：</p>
+        <p>　　Bootstrap 是stwitter公司的两名前端设计师设计的<span style="color: #ff0000;">基于html css javascript的超强的前端框架。</span></p>
+<p>　　Bootstrap 是一移动设备为优先，pc机，平板，手机皆适用的框架。</p>
+<p>　　那么如何引入bootstrap呢?主要有两种方式(文档要求必须是 html5)：</p>
+<p>　　<strong>一：引入bootstrap环境：</strong></p>
 <div class="cnblogs_code">
-<pre><span style="color: #008000;">&lt;!--</span><span style="color: #008000;">jQuery库</span><span style="color: #008000;">--&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #ff0000;"> src</span><span style="color: #0000ff;">="jquery-1.11.3.min.js"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script  </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span>
-    <span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;">这里编写你的jQuery代码</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<pre><span style="color: #008080;"> 1</span> <span style="color: #0000ff;">&lt;!</span><span style="color: #ff00ff;">DOCTYPE html</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 2</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">html </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">="zh-cn"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 3</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 4</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">meta </span><span style="color: #ff0000;">charset</span><span style="color: #0000ff;">="UTF-8"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 5</span>     <span style="color: #008000;">&lt;!--</span><span style="color: #008000;">屏幕和设备的屏幕一致，初始缩放为1:1，禁止用户缩放</span><span style="color: #008000;">--&gt;</span>
+<span style="color: #008080;"> 6</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">meta </span><span style="color: #ff0000;">name</span><span style="color: #0000ff;">="viewport"</span><span style="color: #ff0000;"> content</span><span style="color: #0000ff;">="width=device-width,initial-scale=1,user-scalable=no"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 7</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>bootstrap环境搭建<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 8</span>     <span style="color: #008000;">&lt;!--</span><span style="color: #008000;">引入外部的bootstrap中的css文件</span><span style="color: #008000;">--&gt;</span>
+<span style="color: #008080;"> 9</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">link </span><span style="color: #ff0000;">rel</span><span style="color: #0000ff;">="stylesheet"</span><span style="color: #ff0000;"> href</span><span style="color: #0000ff;">="bootstrap/css/bootstrap.min.css"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">10</span>     <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> jQuery文件。务必在bootstrap.min.js 之前引入 </span><span style="color: #008000;">--&gt;</span>
+<span style="color: #008080;">11</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="bootstrap/js/jquery.min.js"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">12</span>     <span style="color: #008000;">&lt;!--</span><span style="color: #008000;">再引入bootstrap.min.js文件</span><span style="color: #008000;">--&gt;</span>
+<span style="color: #008080;">13</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="bootstrap/js/bootstrap.min.js"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">14</span> <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">15</span>      <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">body </span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">16</span>        <span style="color: #008000;">&lt;!--</span><span style="color: #008000;">内容区</span><span style="color: #008000;">--&gt;</span>
+<span style="color: #008080;">17</span>       <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">18</span> <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">html</span><span style="color: #0000ff;">&gt;</span></pre>
 </div>
-<p>　　其实还有其他的方式引入，这种方式也很多人用，就是直接引入，主要有以下几个方式：Staticfile CDN、又拍云、新浪、谷歌或微软引用 jQuery</p>
-<p>　　Staticfile CDN:</p>
+<p><strong>　　二：使用外部的bootstrap环境：</strong></p>
 <div class="cnblogs_code">
-<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
+<pre><span style="color: #008080;"> 1</span> <span style="color: #0000ff;">&lt;!</span><span style="color: #ff00ff;">DOCTYPE html</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 2</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">html </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">="en"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 3</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 4</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">meta </span><span style="color: #ff0000;">charset</span><span style="color: #0000ff;">="UTF-8"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 5</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>Bootstrap环境搭建<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 6</span>      <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 新 Bootstrap 核心 CSS 文件 </span><span style="color: #008000;">--&gt;</span>
+<span style="color: #008080;"> 7</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">link </span><span style="color: #ff0000;">rel</span><span style="color: #0000ff;">="stylesheet"</span><span style="color: #ff0000;"> href</span><span style="color: #0000ff;">="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 8</span>     <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 可选的Bootstrap主题文件（一般不用引入） </span><span style="color: #008000;">--&gt;</span>
+<span style="color: #008080;"> 9</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">link </span><span style="color: #ff0000;">rel</span><span style="color: #0000ff;">="stylesheet"</span><span style="color: #ff0000;"> href</span><span style="color: #0000ff;">="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">10</span>     <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> jQuery文件。务必在bootstrap.min.js 之前引入 </span><span style="color: #008000;">--&gt;</span>
+<span style="color: #008080;">11</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">12</span>     <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 最新的 Bootstrap 核心 JavaScript 文件 </span><span style="color: #008000;">--&gt;</span>
+<span style="color: #008080;">13</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">14</span> <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">15</span>       <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">16</span>        <span style="color: #008000;">&lt;!--</span><span style="color: #008000;">内容区</span><span style="color: #008000;">--&gt;</span>
+<span style="color: #008080;">17</span>       <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">18</span> <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">html</span><span style="color: #0000ff;">&gt;</span></pre>
 </div>
-<p>　　又拍云 CDN:</p>
-<div class="cnblogs_code">
-<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
-</div>
-<p>　　百度 CDN：</p>
-<div class="cnblogs_code">
-<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
-</div>
-<p>　　新浪 CDN:</p>
-<div class="cnblogs_code">
-<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
-</div>
-<p>　　Google CDN:</p>
-<div class="cnblogs_code">
-<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
-</div>
-<p>　　这些方式的引入会从缓存中加载 jQuery，这样可以减少加载时间。同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。</p>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 2637574117@qq.com </span>
     </div>
@@ -502,12 +499,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>jquery搭建</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">674</span></p>
+    <p><span class="copy-title">文章标题:</span>bootstrap环境搭建</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">450</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="惊风">惊风</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-09-12, 00:44:50</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-12, 16:18:56</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/12/jquerygo/" title="jquery搭建">http://yoursite.com/2019/09/12/jquerygo/</a>
+    <p><span class="copy-title">发布时间:</span>2019-09-15, 14:32:08</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-18, 14:33:45</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/15/bootstrapenvironment/" title="bootstrap环境搭建">http://yoursite.com/2019/09/15/bootstrapenvironment/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
