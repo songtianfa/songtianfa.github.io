@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>CSS中属性顺序</title>
+      <link href="/2019/09/27/csssort/"/>
+      <url>/2019/09/27/csssort/</url>
+      
+        <content type="html"><![CDATA[<p>在CSS超链接的属性中，有四个连接方式：</p><p>a:link&nbsp;&nbsp;a:hover&nbsp;&nbsp;a:visited&nbsp;&nbsp;a:acticve</p><p>之前在使用的时候一直是按照自认为的顺序中去写的，就是 L H V A的排序方式，然而有些时候却发现并不起作用了，查找了一些资料，也上网查找了一下，也有很多人在问及这个问题，如果是按照这种顺序排序，有时候显示正确，而有时候却显示不正确，追究原因，这个可能是由于浏览器的识别先后问题所导致的，也额能有缓存的原因在里面个人觉得，而最正确的写法应该是 L V H A，举个例子：</p><div class="cnblogs_code"><pre>&lt;!DOCTYPE html&gt;&lt;html lang=<span style="color: #800000;">"</span><span style="color: #800000;">en</span><span style="color: #800000;">"</span>&gt;&lt;head&gt;    &lt;meta charset=<span style="color: #800000;">"</span><span style="color: #800000;">UTF-8</span><span style="color: #800000;">"</span>&gt;    &lt;title&gt;Document&lt;/title&gt;    &lt;style type=<span style="color: #800000;">"</span><span style="color: #800000;">text/css</span><span style="color: #800000;">"</span>&gt;<span style="color: #000000;">    a:link{        color:red;        text</span>-<span style="color: #000000;">decoration: none;     }    a:visited{        color:green;        text</span>-<span style="color: #000000;">decoration: underline;     }    a:hover{        color:yellow;        text</span>-<span style="color: #000000;">decoration: none;     }    a:actived{        color:red;        text</span>-<span style="color: #000000;">decoration: none;     }    </span>&lt;/style&gt;&lt;/head&gt;&lt;body&gt;    &lt;a href=<span style="color: #800000;">"</span><span style="color: #800000;">#</span><span style="color: #800000;">"</span>&gt;百度&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;</pre></div><p>所有的连接，如果需要用用到这四个伪类的话，无论是哪一种情况，只要按照这个顺序排列就绝对不会出错了。</p><p>重申一遍正确的顺序应该是：L V H A</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>css样式引入</title>
       <link href="/2019/09/17/StyleSheets/"/>
       <url>/2019/09/17/StyleSheets/</url>
