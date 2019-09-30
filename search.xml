@@ -45,9 +45,9 @@
       
         <tags>
             
-            <tag> html </tag>
-            
             <tag> css </tag>
+            
+            <tag> html </tag>
             
         </tags>
       
@@ -162,6 +162,31 @@
     
     
     <entry>
+      <title>ubuntu安装后该做什么</title>
+      <link href="/2019/09/11/installubuntu/"/>
+      <url>/2019/09/11/installubuntu/</url>
+      
+        <content type="html"><![CDATA[<p>　　安装完ubuntu或者linux后应该做什么?首先在你安装完之后，都知道，很多系统都是有自带的一些软件之类，很多其实是不必要的，我们可以完全删掉，需要的时候再重装，那么安装完之后应该做什么呢?</p><p>　　1、智能升级。安装新软件包,删除废弃的软件包：</p><div class="cnblogs_code"><pre>apt-<span style="color: #0000ff;">get</span> dist-upgrade;</pre></div><p>　　2、自动删除无用的软件：</p><div class="cnblogs_code"><pre>apt-<span style="color: #0000ff;">get</span> autoremove;</pre></div><p>　　3、删除libreoffice，libreoffice虽然是开源的，但是Java写出来的office执行效率实在不敢恭维，装完系统后果断删掉</p><div class="cnblogs_code"><pre>sudo apt-<span style="color: #0000ff;">get</span> remove libreoffice-common</pre></div><p>　　4、删除Amazon的链接：</p><div class="cnblogs_code"><pre>sudo apt-<span style="color: #0000ff;">get</span> remove unity-webapps-common</pre></div><p>　　3.删掉基本不用的自带软件(用的时候再装也来得及)</p><div class="cnblogs_code"><pre>sudo apt-<span style="color: #0000ff;">get</span> remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku landscape-client-ui-install</pre></div><div class="cnblogs_code"><pre>sudo apt-<span style="color: #0000ff;">get</span> remove onboard deja-dup</pre></div><p>　　这样系统就基本干净了，节省了很多的空间，至于需要再安装什么软件的自己去装就好了，比如输入法，vim，sublime等等。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 运维 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SEO基础知识</title>
       <link href="/2019/09/11/seoknowledge/"/>
       <url>/2019/09/11/seoknowledge/</url>
@@ -255,9 +280,9 @@
       
         <tags>
             
-            <tag> html </tag>
-            
             <tag> css </tag>
+            
+            <tag> html </tag>
             
         </tags>
       
@@ -309,9 +334,9 @@
       
         <tags>
             
-            <tag> html </tag>
-            
             <tag> css </tag>
+            
+            <tag> html </tag>
             
         </tags>
       
@@ -358,6 +383,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
       
     </entry>
     

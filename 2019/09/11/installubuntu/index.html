@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>jquery搭建 | 惊风随笔-个人技术分享博客网站</title>
-  <meta name="keywords" content=" jquery , 前端框架 ">
-  <meta name="description" content="jquery搭建 | 惊风随笔-个人技术分享博客网站">
+  <title>ubuntu安装后该做什么 | 惊风随笔-个人技术分享博客网站</title>
+  <meta name="keywords" content=" linux ">
+  <meta name="description" content="ubuntu安装后该做什么 | 惊风随笔-个人技术分享博客网站">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="页面未找到！请点击左侧栏目或者返回首页">
 <meta property="og:type" content="website">
@@ -393,9 +393,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-jquerygo" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-installubuntu" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">jquery搭建</h1>
+        <h1 class="article-title">ubuntu安装后该做什么</h1>
     
     <div class="article-meta">
         
@@ -403,28 +403,26 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="前端">前端</a>
+                <a href="javascript:" data-rel="运维">运维</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color2">jquery</a>
-            
-            <a href="javascript:" class="color5">前端框架</a>
+            <a href="javascript:" class="color1">linux</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-12 16:18:56'>2019-09-12 00:44</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-30 15:09:48'>2019-09-11 20:25</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:674</span>
+        <span>字数:275</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -458,54 +456,31 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　description</p>
-<p>　　jQuery，顾名思义，<span style="color: #ff0000;">也就是JavaScript和Query(查询)，即辅助JavaScript开发的库。jQuery是一个快速、简洁的JavaScript框架</span>，是继Prototype之后又一个优秀的JavaScript代码库(或JavaScript框架)。jQuery设计的<span style="color: #ff0000;">宗旨是&ldquo;write Less，Do More&rdquo;</span>，即倡导写更少的代码，做更多的事情。<span style="color: #ff0000;">它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互，jQuery的理念就是&ldquo;write less do more&rdquo;。</span></p>
-<p>　　jQuery库文件有2个版本，分别是1.x版本和2.x版本。但是<span style="color: #ff0000;">1.x版本支持IE6、IE7和IE8，而2.x则不再支持，</span>目前依旧有很多人在使用的6/7/8等的版本，市场依旧很大，所以最新的版本不一定是最好的，所以建议使用1.x版本的，jQuery库文件其实有2种类型：(1)开发版;(2)发布版。开发版是没有经过压缩的，供给我们学习jQuery的源码使用，一般用jquery.js命名。而发布版是经过压缩的，供给我们使用jQuery，一般用jquery.min.js命名，我们开发用的一般都是压缩的版本。</p>
-<p>　　那么该如何安装jQuery呢?其实很简单，跟CSS的引入是一样的，只是自己的写的jq的代码必须写在引入源码的下面才会有效，否则是无效的，必须是这种模式：</p>
+        <p>　　安装完ubuntu或者linux后应该做什么?首先在你安装完之后，都知道，很多系统都是有自带的一些软件之类，很多其实是不必要的，我们可以完全删掉，需要的时候再重装，那么安装完之后应该做什么呢?</p>
+<p>　　1、智能升级。安装新软件包,删除废弃的软件包：</p>
 <div class="cnblogs_code">
-<pre><span style="color: #008000;">&lt;!--</span><span style="color: #008000;">jQuery库</span><span style="color: #008000;">--&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #ff0000;"> src</span><span style="color: #0000ff;">="jquery-1.11.3.min.js"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script  </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span>
-    <span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;">这里编写你的jQuery代码</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span></pre>
+<pre>apt-<span style="color: #0000ff;">get</span> dist-upgrade;</pre>
 </div>
-<p>　　其实还有其他的方式引入，这种方式也很多人用，就是直接引入，主要有以下几个方式：Staticfile CDN、又拍云、新浪、谷歌或微软引用 jQuery</p>
-<p>　　Staticfile CDN:</p>
+<p>　　2、自动删除无用的软件：</p>
 <div class="cnblogs_code">
-<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
+<pre>apt-<span style="color: #0000ff;">get</span> autoremove;</pre>
 </div>
-<p>　　又拍云 CDN:</p>
+<p>　　3、删除libreoffice，libreoffice虽然是开源的，但是Java写出来的office执行效率实在不敢恭维，装完系统后果断删掉</p>
 <div class="cnblogs_code">
-<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
+<pre>sudo apt-<span style="color: #0000ff;">get</span> remove libreoffice-common</pre>
 </div>
-<p>　　百度 CDN：</p>
+<p>　　4、删除Amazon的链接：</p>
 <div class="cnblogs_code">
-<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
+<pre>sudo apt-<span style="color: #0000ff;">get</span> remove unity-webapps-common</pre>
 </div>
-<p>　　新浪 CDN:</p>
+<p>　　3.删掉基本不用的自带软件(用的时候再装也来得及)</p>
 <div class="cnblogs_code">
-<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
+<pre>sudo apt-<span style="color: #0000ff;">get</span> remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku landscape-client-ui-install</pre>
 </div>
-<p>　　Google CDN:</p>
 <div class="cnblogs_code">
-<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
-<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span></pre>
+<pre>sudo apt-<span style="color: #0000ff;">get</span> remove onboard deja-dup</pre>
 </div>
-<p>　　这些方式的引入会从缓存中加载 jQuery，这样可以减少加载时间。同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。</p>
+<p>　　这样系统就基本干净了，节省了很多的空间，至于需要再安装什么软件的自己去装就好了，比如输入法，vim，sublime等等。</p>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 2637574117@qq.com </span>
     </div>
@@ -518,12 +493,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>jquery搭建</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">674</span></p>
+    <p><span class="copy-title">文章标题:</span>ubuntu安装后该做什么</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">275</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="惊风">惊风</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-09-12, 00:44:50</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-12, 16:18:56</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/12/jquerygo/" title="jquery搭建">http://yoursite.com/2019/09/12/jquerygo/</a>
+    <p><span class="copy-title">发布时间:</span>2019-09-11, 20:25:07</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-30, 15:09:48</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/11/installubuntu/" title="ubuntu安装后该做什么">http://yoursite.com/2019/09/11/installubuntu/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
