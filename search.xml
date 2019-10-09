@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>html解决空格显示问题</title>
+      <link href="/2019/10/07/htmlspace/"/>
+      <url>/2019/10/07/htmlspace/</url>
+      
+        <content type="html"><![CDATA[<p>　　在前端里面，大家都知道，html中输入空格或换行是识别不了是空格的，但是有时候需要实现，那么该如何解决呢?主要有以下几个方面：</p><p>　　1：常用的转义：&amp;nbsp;</p><p>　　2：使用全角拼音，然后输入空格也可实现</p><p>　　3：用标签 pre实现(一般很少用了)</p><p>　　4：用css text-indent实现(这个一般用于时间段首空格)</p><p>　　5：用CSS中的white-space实现</p><p>　　好了，以上就是关于实现空格的解决方式，一般都使用CSS来解决的比较多。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS中属性顺序</title>
       <link href="/2019/09/27/csssort/"/>
       <url>/2019/09/27/csssort/</url>
