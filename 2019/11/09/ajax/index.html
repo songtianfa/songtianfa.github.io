@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>404 | 惊风随笔-个人技术分享博客网站</title>
-  <meta name="keywords" content>
-  <meta name="description" content="404 | 惊风随笔-个人技术分享博客网站">
+  <title>ajax是什么 | 惊风随笔-个人技术分享博客网站</title>
+  <meta name="keywords" content=" ajax ">
+  <meta name="description" content="ajax是什么 | 惊风随笔-个人技术分享博客网站">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="页面未找到！请点击左侧栏目或者返回首页">
 <meta property="og:type" content="website">
@@ -431,24 +431,36 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-ajax" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">404</h1>
+        <h1 class="article-title">ajax是什么</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a href="javascript:" data-rel="前端">前端</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">ajax</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-29 12:23:11'>2019-09-29 12:16</time>
+        创建时间:<time class="date" title='更新时间: 2019-11-13 16:12:52'>2019-11-09 16:11</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:18</span>
+        <span>字数:304</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -467,7 +479,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#页面未找到！请点击左侧栏目或者返回首页"><span class="toc-text">页面未找到！请点击左侧栏目或者返回首页</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -482,7 +494,30 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="页面未找到！请点击左侧栏目或者返回首页"><a href="#页面未找到！请点击左侧栏目或者返回首页" class="headerlink" title="页面未找到！请点击左侧栏目或者返回首页"></a>页面未找到！请点击左侧栏目或者<a href="https://songtianfa.github.io" target="_blank" rel="noopener">返回首页</a></h3>
+        <p>　　AJAX(异步 JavaScript 和 XML)，是指一种创建交互式网页应用的网页开发技术。Ajax 它是与服务器交换数据的技术，在浏览器与 Web 服务器之间使用异步数据传输(HTTP 请求)，它在不重载全部页面的情况下，实现了对部分网页的更新。这样就可使网页从服务器请求少量的信息，而不是整个页面。使用 AJAX 的应用程序案例：谷歌地图、腾讯微博、优酷视频、人人网等等。</p>
+<p>　　比如通过 AJAX 加载一段文本：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #0000ff;">&lt;!</span><span style="color: #ff00ff;">DOCTYPE html</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 2</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">html</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 3</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 4</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">meta </span><span style="color: #ff0000;">charset</span><span style="color: #0000ff;">="utf-8"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 5</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #ff0000;"> src</span><span style="color: #0000ff;">="jquery-1.12.0.min.js"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 6</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">type</span><span style="color: #0000ff;">="text/javascript"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 7</span> <span style="background-color: #f5f5f5; color: #000000;">        $(document).ready(</span><span style="background-color: #f5f5f5; color: #0000ff;">function</span><span style="background-color: #f5f5f5; color: #000000;">(){
+</span><span style="color: #008080;"> 8</span> <span style="background-color: #f5f5f5; color: #000000;">          $(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">#btn</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">).click(</span><span style="background-color: #f5f5f5; color: #0000ff;">function</span><span style="background-color: #f5f5f5; color: #000000;">(){
+</span><span style="color: #008080;"> 9</span> <span style="background-color: #f5f5f5; color: #000000;">          htmlobj</span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;">$.ajax({url:</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">/jquery/test1.txt</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">,async:</span><span style="background-color: #f5f5f5; color: #0000ff;">false</span><span style="background-color: #f5f5f5; color: #000000;">});
+</span><span style="color: #008080;">10</span> <span style="background-color: #f5f5f5; color: #000000;">          $(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">#myDiv</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">).html(htmlobj.responseText);
+</span><span style="color: #008080;">11</span> <span style="background-color: #f5f5f5; color: #000000;">          });
+</span><span style="color: #008080;">12</span> <span style="background-color: #f5f5f5; color: #000000;">        });
+</span><span style="color: #008080;">13</span>     <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">14</span> <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">15</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">16</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="myDiv"</span><span style="color: #0000ff;">&gt;&lt;</span><span style="color: #800000;">h2</span><span style="color: #0000ff;">&gt;</span>通过 AJAX 改变文本<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">h2</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">17</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">button </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="btn"</span><span style="color: #ff0000;"> type</span><span style="color: #0000ff;">="button"</span><span style="color: #0000ff;">&gt;</span>改变内容<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">button</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">18</span> <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">19</span> <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">html</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>　　Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。</p>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 2637574117@qq.com </span>
     </div>
@@ -493,6 +528,18 @@
     <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
 </p>
 
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>ajax是什么</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">304</span></p>
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="惊风">惊风</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-11-09, 16:11:42</p>
+    <p><span class="copy-title">最后更新:</span>2019-11-13, 16:12:52</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/09/ajax/" title="ajax是什么">http://yoursite.com/2019/11/09/ajax/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
