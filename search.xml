@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>JQuey中ready()的4种写法</title>
+      <link href="/2019/11/10/readyfind/"/>
+      <url>/2019/11/10/readyfind/</url>
+      
+        <content type="html"><![CDATA[<p>　　在jQuery中，对于ready()方法，共有4种写法：</p><p>　　(1)写法一：</p><div class="cnblogs_code"><pre><span style="color: #008080;">1</span> <span style="color: #000000;">$(document).ready(functin(){</span><span style="color: #008080;">2</span> <span style="color: #000000;">    //代码部分</span><span style="color: #008080;">3</span> })</pre></div><p>　　分析：这种代码形式是最常见的，其中$(document)表示&ldquo;选取document&rdquo;，然后调用jQuery对象的ready()方法。</p><p>　　(2)写法二：</p><div class="cnblogs_code"><pre><span style="color: #008080;">1</span> <span style="color: #000000;">jQuery(document).ready(function(){</span><span style="color: #008080;">2</span> <span style="color: #000000;">    //代码部分</span><span style="color: #008080;">3</span> })</pre></div><p>　　分析：在jQuery中，$就是指jQuery。因此我们可以使用$来代替jQuery，两者是等价的。</p><p>　　(3)写法三：</p><div class="cnblogs_code"><pre><span style="color: #008080;">1</span> <span style="color: #000000;">$(function(){</span><span style="color: #008080;">2</span> <span style="color: #000000;">    //代码部分</span><span style="color: #008080;">3</span> })</pre></div><p>　　在jQuery中，最常用的是写法三。我们也建议大家使用$(function(){})这种形式，方便简洁。</p><p>　　(4)写法四：</p><div class="cnblogs_code"><pre><span style="color: #008080;">1</span> <span style="color: #000000;">jQuery(function(){</span><span style="color: #008080;">2</span> <span style="color: #000000;">    //代码部分</span><span style="color: #008080;">3</span> })</pre></div><p>　　$(document).ready()是jQuery中最重要的一个方法，可以极大地提高页面的加载速度。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jquery </tag>
+            
+            <tag> 前端框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>选项卡小案例</title>
       <link href="/2019/10/19/tabcases/"/>
       <url>/2019/10/19/tabcases/</url>
