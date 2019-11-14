@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>about | 惊风随笔-个人技术分享博客网站</title>
-  <meta name="keywords" content>
-  <meta name="description" content="about | 惊风随笔-个人技术分享博客网站">
+  <title>HTML不换行，多余用省略号代替 | 惊风随笔-个人技术分享博客网站</title>
+  <meta name="keywords" content=" css , html ">
+  <meta name="description" content="HTML不换行，多余用省略号代替 | 惊风随笔-个人技术分享博客网站">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="页面未找到！请点击左侧栏目或者返回首页">
 <meta property="og:type" content="website">
@@ -439,24 +439,38 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-htmlnowrap" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">about</h1>
+        <h1 class="article-title">HTML不换行，多余用省略号代替</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a href="javascript:" data-rel="前端">前端</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color4">css</a>
+            
+            <a href="javascript:" class="color5">html</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-06 16:39:30'>2019-09-06 07:27</time>
+        创建时间:<time class="date" title='更新时间: 2019-11-14 15:27:45'>2019-11-13 21:25</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:331</span>
+        <span>字数:411</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -490,13 +504,54 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>关于惊风：<br>　　潜心研究web前端技术，一边工作一边积累经验，分享一些经验等心得。</p>
-<p>　　1. 一个对于”web前端”和”SEO技术”稍有研究，并一直致力于web前端方向的站长。</p>
-<p>　　2. 很多时候觉得自己对待任何事都很执着，一旦定了目标，就会不达目标不罢休，永不退缩!</p>
-<p>　　3.不管学习什么东西，一定要有属于自己的“学习方法”和善于“对事物的总结”。</p>
-<p>　　4.于岁月中前进，抱着一份责任，不要忘记我们出发的初衷 。</p>
-<p>　　5.人的一生中都是在不断的学习，不管是技术也好，做人也罢!我觉得都应该以一颗“谦卑的心态来学习，在这热闹的互联网世界有着自己的步伐。</p>
-<p>　　生活难免会高低起伏，岁月总会有寒来暑往。一个人去尘世去慢走，于岁月中前进，抱着一份责任，去翻过那些高山，去跨过那些流水，也不要忘记我们出发的初衷，即使翻过了一座山也只是翻过了一座山而已，在这些事情途中慢慢点亮一盏属于自己的灯光，无关岁月，只为自己出发时的理想。</p>
+        <p>　　最主要的css样式：</p>
+<p>　　white-space: nowrap;</p>
+<p>　　overflow: hidden;</p>
+<p>　　text-overflow: ellipsis;</p>
+<p>　　例子：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #0000ff;">&lt;!</span><span style="color: #ff00ff;">DOCTYPE html</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 2</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">html </span><span style="color: #ff0000;">lang</span><span style="color: #0000ff;">="en"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 3</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 4</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">meta </span><span style="color: #ff0000;">charset</span><span style="color: #0000ff;">="UTF-8"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 5</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>Document<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 6</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">style</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;"> 7</span> <span style="background-color: #f5f5f5; color: #800000;">    *</span><span style="background-color: #f5f5f5; color: #000000;">{</span><span style="background-color: #f5f5f5; color: #ff0000;">margin</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">0</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #ff0000;">padding</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">0</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #000000;">}</span>
+<span style="color: #008080;"> 8</span> <span style="background-color: #f5f5f5; color: #800000;">    .page_right_bot</span><span style="background-color: #f5f5f5; color: #000000;">{</span>
+<span style="color: #008080;"> 9</span> <span style="background-color: #f5f5f5; color: #ff0000;">     width</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">165px</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+<span style="color: #008080;">10</span> <span style="background-color: #f5f5f5; color: #ff0000;">     height</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">128px</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+<span style="color: #008080;">11</span> <span style="background-color: #f5f5f5; color: #ff0000;">     border</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;"> 1px solid red</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+<span style="color: #008080;">12</span> <span style="background-color: #f5f5f5; color: #ff0000;">     overflow</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">hidden</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+<span style="color: #008080;">13</span>      <span style="background-color: #f5f5f5; color: #000000;">}</span>
+<span style="color: #008080;">14</span> <span style="background-color: #f5f5f5; color: #800000;">    .page_right_bot ul li</span><span style="background-color: #f5f5f5; color: #000000;">{</span>
+<span style="color: #008080;">15</span> <span style="background-color: #f5f5f5; color: #ff0000;">         height</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">25px</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+<span style="color: #008080;">16</span> <span style="background-color: #f5f5f5; color: #ff0000;">         line-height</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">25px</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+<span style="color: #008080;">17</span> <span style="background-color: #f5f5f5; color: #ff0000;">         cursor</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;"> pointer</span><span style="background-color: #f5f5f5; color: #000000;">;</span>
+<span style="color: #008080;">18</span> <span style="background-color: #f5f5f5; color: #ff0000;">         word-break</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">keep-all</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #008000;">/*</span><span style="background-color: #f5f5f5; color: #008000;"> 不换行 </span><span style="background-color: #f5f5f5; color: #008000;">*/</span>
+<span style="color: #008080;">19</span> <span style="background-color: #f5f5f5; color: #ff0000;">        white-space</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">nowrap</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #008000;">/*</span><span style="background-color: #f5f5f5; color: #008000;"> 不换行 </span><span style="background-color: #f5f5f5; color: #008000;">*/</span>
+<span style="color: #008080;">20</span> <span style="background-color: #f5f5f5; color: #ff0000;">        overflow</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">hidden</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #008000;">/*</span><span style="background-color: #f5f5f5; color: #008000;"> 内容超出宽度时隐藏超出部分的内容 </span><span style="background-color: #f5f5f5; color: #008000;">*/</span>
+<span style="color: #008080;">21</span> <span style="background-color: #f5f5f5; color: #ff0000;">        text-overflow</span><span style="background-color: #f5f5f5; color: #000000;">:</span><span style="background-color: #f5f5f5; color: #0000ff;">ellipsis</span><span style="background-color: #f5f5f5; color: #000000;">;</span><span style="background-color: #f5f5f5; color: #008000;">/*</span><span style="background-color: #f5f5f5; color: #008000;"> 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。</span><span style="background-color: #f5f5f5; color: #008000;">*/</span>
+<span style="color: #008080;">22</span>     <span style="background-color: #f5f5f5; color: #000000;">}</span>
+<span style="color: #008080;">23</span>     <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">style</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">24</span> <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">25</span> <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">26</span>     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">="page_right_bot"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">27</span>           <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">ul</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">28</span>               <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>威洁士汽车美容加盟 业内的佼佼者<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">29</span>               <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>一点点奶茶加盟店 打造茶饮极致诱惑<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">30</span>               <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>威洁士汽车美容加盟 业内的佼佼者<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">31</span>               <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>一点点奶茶加盟店 打造茶饮极致诱惑<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">32</span>               <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>车奇士汽车快修加盟 80后创业轻松<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">33</span>               <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>雅芳护肤品加盟 非常有发展前<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">34</span>               <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>顺畅衣柜加盟选择欧蒂尼，创富新项目<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">35</span>               <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>景克丽缇娜美容院加盟 书写财富新篇章<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">36</span>               <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>威洁士汽车美容加盟 业内的佼佼者<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">37</span>               <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>加盟驰易佳换油中心 让你轻松当老板<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">38</span>           <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">ul</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">39</span>    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">40</span> <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008080;">41</span> <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">html</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 2637574117@qq.com </span>
@@ -508,6 +563,18 @@
     <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
 </p>
 
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>HTML不换行，多余用省略号代替</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">411</span></p>
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="惊风">惊风</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-11-13, 21:25:10</p>
+    <p><span class="copy-title">最后更新:</span>2019-11-14, 15:27:45</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/13/htmlnowrap/" title="HTML不换行，多余用省略号代替">http://yoursite.com/2019/11/13/htmlnowrap/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
